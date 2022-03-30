@@ -10,10 +10,10 @@
     <div class="charging">
       <div>{{ batteryStatus }}</div>
       <div v-show="Number.isFinite(battery.dischargingTime) && battery.dischargingTime != 0">
-        剩余可使用时间：{{ calcDischargingTime }}
+        剩餘可使用時間：{{ calcDischargingTime }}
       </div>
       <span v-show="Number.isFinite(battery.chargingTime) && battery.chargingTime != 0">
-        距离电池充满需要：{{ calcChargingTime }}
+        距離電池充满需要：{{ calcChargingTime }}
       </span>
     </div>
   </div>
@@ -43,7 +43,7 @@
       batteryStatus: {
         // 电池状态
         type: String,
-        validator: (val: string) => ['充电中', '已充满', '已断开电源'].includes(val),
+        validator: (val: string) => ['充電中', '已充满', '已斷開電源'].includes(val),
       },
     },
   });

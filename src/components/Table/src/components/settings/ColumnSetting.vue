@@ -15,7 +15,7 @@
                   >列展示</n-checkbox
                 >
                 <n-checkbox v-model:checked="selection" @update:checked="onSelection"
-                  >勾选列</n-checkbox
+                  >勾選列</n-checkbox
                 >
                 <n-button text type="info" size="small" class="mt-1" @click="resetColumns"
                   >重置</n-button
@@ -49,7 +49,7 @@
                             <VerticalRightOutlined />
                           </n-icon>
                         </template>
-                        <span>固定到左侧</span>
+                        <span>固定到左側</span>
                       </n-tooltip>
                       <n-divider vertical />
                       <n-tooltip trigger="hover" placement="bottom">
@@ -63,7 +63,7 @@
                             <VerticalLeftOutlined />
                           </n-icon>
                         </template>
-                        <span>固定到右侧</span>
+                        <span>固定到右側</span>
                       </n-tooltip>
                     </div>
                   </div>

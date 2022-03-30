@@ -4,7 +4,7 @@
     <n-grid cols="1 s:2 m:3 l:4 xl:4 2xl:4" responsive="screen" :x-gap="12" :y-gap="8">
       <n-grid-item>
         <NCard
-          title="访问量"
+          title="訪問量"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -42,7 +42,7 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" text :repeat="2" />
               <template v-else>
-                <div class="text-sn"> 总访问量： </div>
+                <div class="text-sn"> 總訪問量： </div>
                 <div class="text-sn">
                   <CountTo :startVal="1" :endVal="visits.amount" />
                 </div>
@@ -53,7 +53,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="销售额"
+          title="銷售額"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -65,7 +65,7 @@
             <n-skeleton v-if="loading" :width="100" size="medium" />
             <CountTo
               v-else
-              prefix="￥"
+              prefix="＄"
               :startVal="1"
               :endVal="saleroom.weekSaleroom"
               class="text-3xl"
@@ -85,9 +85,9 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" :width="100" size="medium" />
               <template v-else>
-                <div class="text-sn"> 总销售额： </div>
+                <div class="text-sn"> 總銷售額： </div>
                 <div class="text-sn">
-                  <CountTo prefix="￥" :startVal="1" :endVal="saleroom.amount" />
+                  <CountTo prefix="＄" :startVal="1" :endVal="saleroom.amount" />
                 </div>
               </template>
             </div>
@@ -96,7 +96,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="订单量"
+          title="訂單量"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -134,7 +134,7 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" :width="100" size="medium" />
               <template v-else>
-                <div class="text-sn"> 转化率： </div>
+                <div class="text-sn"> 轉化率： </div>
                 <div class="text-sn">
                   <CountTo :startVal="1" suffix="%" :endVal="orderLarge.amount" />
                 </div>
@@ -145,7 +145,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="成交额"
+          title="成交額"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -155,7 +155,7 @@
           </template>
           <div class="py-1 px-1 flex justify-between">
             <n-skeleton v-if="loading" :width="100" size="medium" />
-            <CountTo v-else prefix="￥" :startVal="1" :endVal="volume.weekLarge" class="text-3xl" />
+            <CountTo v-else prefix="＄" :startVal="1" :endVal="volume.weekLarge" class="text-3xl" />
           </div>
           <div class="py-1 px-1 flex justify-between">
             <div class="text-sn">
@@ -183,9 +183,9 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" :width="100" size="medium" />
               <template v-else>
-                <div class="text-sn"> 总成交额： </div>
+                <div class="text-sn"> 總成交額： </div>
                 <div class="text-sn">
-                  <CountTo prefix="￥" :startVal="1" :endVal="volume.amount" />
+                  <CountTo prefix="＄" :startVal="1" :endVal="volume.amount" />
                 </div>
               </template>
             </div>
@@ -279,7 +279,7 @@
     {
       icon: AccountBookOutlined,
       size: '32',
-      title: '订单',
+      title: '訂單',
       color: '#b37feb',
       eventObject: {
         click: () => {},
@@ -288,7 +288,7 @@
     {
       icon: CreditCardOutlined,
       size: '32',
-      title: '票据',
+      title: '票據',
       color: '#ffd666',
       eventObject: {
         click: () => {},
@@ -306,7 +306,7 @@
     {
       icon: TagsOutlined,
       size: '32',
-      title: '标签',
+      title: '標簽',
       color: '#ff85c0',
       eventObject: {
         click: () => {},

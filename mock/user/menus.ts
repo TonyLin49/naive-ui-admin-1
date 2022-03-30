@@ -24,7 +24,7 @@ const menusList = [
         name: 'dashboard_monitor',
         component: '/dashboard/monitor/monitor',
         meta: {
-          title: '监控页',
+          title: '監控頁',
         },
       },
       {
@@ -32,7 +32,6 @@ const menusList = [
         name: 'dashboard_workplace',
         component: '/dashboard/workplace/workplace',
         meta: {
-          hidden: true,
           title: '工作台',
         },
       },

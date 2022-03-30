@@ -32,7 +32,7 @@ const menuList = () => {
       ],
     },
     {
-      label: '表单管理',
+      label: '表單管理',
       key: 'form',
       type: 1,
       subtitle: 'form',
@@ -41,7 +41,7 @@ const menuList = () => {
       path: '/form',
       children: [
         {
-          label: '基础表单',
+          label: '基礎表單',
           key: 'basic-form',
           type: 1,
           subtitle: 'basic-form',
@@ -50,7 +50,7 @@ const menuList = () => {
           path: '/form/basic-form',
         },
         {
-          label: '分步表单',
+          label: '分步表單',
           key: 'step-form',
           type: 1,
           subtitle: 'step-form',
@@ -59,7 +59,7 @@ const menuList = () => {
           path: '/form/step-form',
         },
         {
-          label: '表单详情',
+          label: '表單詳情',
           key: 'detail',
           type: 1,
           subtitle: 'detail',

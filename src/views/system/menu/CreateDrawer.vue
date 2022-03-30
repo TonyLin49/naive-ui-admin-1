@@ -8,30 +8,30 @@
         label-placement="left"
         :label-width="100"
       >
-        <n-form-item label="类型" path="type">
-          <span>{{ formParams.type === 1 ? '侧边栏菜单' : '' }}</span>
+        <n-form-item label="類型" path="type">
+          <span>{{ formParams.type === 1 ? '側邊欄菜單' : '' }}</span>
         </n-form-item>
-        <n-form-item label="标题" path="label">
-          <n-input placeholder="请输入标题" v-model:value="formParams.label" />
+        <n-form-item label="標題" path="label">
+          <n-input placeholder="請輸入標題" v-model:value="formParams.label" />
         </n-form-item>
-        <n-form-item label="副标题" path="subtitle">
-          <n-input placeholder="请输入副标题" v-model:value="formParams.subtitle" />
+        <n-form-item label="副標題" path="subtitle">
+          <n-input placeholder="請輸入副標題" v-model:value="formParams.subtitle" />
         </n-form-item>
-        <n-form-item label="路径" path="path">
-          <n-input placeholder="请输入路径" v-model:value="formParams.path" />
+        <n-form-item label="路徑" path="path">
+          <n-input placeholder="請輸入路徑" v-model:value="formParams.path" />
         </n-form-item>
-        <n-form-item label="打开方式" path="openType">
+        <n-form-item label="打開方式" path="openType">
           <n-radio-group v-model:value="formParams.openType" name="openType">
             <n-space>
-              <n-radio :value="1">当前窗口</n-radio>
+              <n-radio :value="1">當前窗口</n-radio>
               <n-radio :value="2">新窗口</n-radio>
             </n-space>
           </n-radio-group>
         </n-form-item>
-        <n-form-item label="菜单权限" path="auth">
-          <n-input placeholder="请输入权限，多个权限用，分割" v-model:value="formParams.auth" />
+        <n-form-item label="菜單權限" path="auth">
+          <n-input placeholder="請輸入權限，多個權限用，分割" v-model:value="formParams.auth" />
         </n-form-item>
-        <n-form-item label="隐藏侧边栏" path="hidden">
+        <n-form-item label="隐藏側邊欄" path="hidden">
           <n-switch v-model:value="formParams.hidden" />
         </n-form-item>
       </n-form>
@@ -53,12 +53,12 @@
   const rules = {
     label: {
       required: true,
-      message: '请输入标题',
+      message: '請輸入標題',
       trigger: 'blur',
     },
     path: {
       required: true,
-      message: '请输入路径',
+      message: '請輸入路徑',
       trigger: 'blur',
     },
   };
@@ -68,7 +68,7 @@
     props: {
       title: {
         type: String,
-        default: '添加顶级菜单',
+        default: '新增頂級菜單',
       },
       width: {
         type: Number,

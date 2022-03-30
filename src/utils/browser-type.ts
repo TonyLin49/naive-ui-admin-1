@@ -104,21 +104,21 @@ export default function BrowserType(lang: 'zh-cn' | 'en' = 'en') {
   ]).get(true) || ['none', 'unknow'];
 
   return {
-    'zh-cn': Object.assign(
+    'zh-tw': Object.assign(
       {
         内核: engine, // 内核: webkit gecko presto trident
         内核版本: engineVs, // 内核版本
         平台: platform, // 平台: desktop mobile
-        载体: supporter, // 载体: chrome safari firefox opera iexplore edge
-        载体版本: supporterVs, // 载体版本
-        系统: system, // 系统: windows macos linux android ios
-        系统版本: systemVs, // 系统版本
+        載體: supporter, // 载体: chrome safari firefox opera iexplore edge
+        載體版本: supporterVs, // 载体版本
+        系統: system, // 系统: windows macos linux android ios
+        系統版本: systemVs, // 系统版本
       },
       shell === 'none'
         ? {}
         : {
-            外壳: shell, // 外壳: wechat qq uc 360 2345 sougou liebao maxthon
-            外壳版本: shellVs, // 外壳版本
+            外殻: shell, // 外壳: wechat qq uc 360 2345 sougou liebao maxthon
+            外殻版本: shellVs, // 外壳版本
           }
     ),
     en: Object.assign(

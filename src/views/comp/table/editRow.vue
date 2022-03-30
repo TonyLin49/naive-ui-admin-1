@@ -2,7 +2,7 @@
   <n-card :bordered="false" class="proCard">
     <BasicTable
       title="表格列表"
-      titleTooltip="这是一个提示"
+      titleTooltip="這是一個提示"
       :columns="columns"
       :request="loadDataTable"
       :row-key="(row) => row.id"
@@ -14,7 +14,7 @@
       :scroll-x="1590"
     >
       <template #toolbar>
-        <n-button type="primary" @click="reloadTable">刷新数据</n-button>
+        <n-button type="primary" @click="reloadTable">刷新數據</n-button>
       </template>
     </BasicTable>
   </n-card>
@@ -75,7 +75,7 @@
     if (!record.editable) {
       return [
         {
-          label: '编辑',
+          label: '編輯',
           onClick: handleEdit.bind(null, record),
         },
       ];

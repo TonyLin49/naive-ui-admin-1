@@ -8,17 +8,17 @@ export const columns = [
     width: 100,
   },
   {
-    title: '编码',
+    title: '編碼',
     key: 'no',
     width: 100,
   },
   {
-    title: '名称',
+    title: '名稱',
     key: 'name',
     width: 100,
   },
   {
-    title: '头像',
+    title: '頭像',
     key: 'avatar',
     width: 100,
     render(row) {
@@ -34,17 +34,17 @@ export const columns = [
     width: 150,
   },
   {
-    title: '开始日期',
+    title: '開始日期',
     key: 'beginTime',
     width: 160,
   },
   {
-    title: '结束日期',
+    title: '結束日期',
     key: 'endTime',
     width: 160,
   },
   {
-    title: '状态',
+    title: '狀態',
     key: 'status',
     width: 100,
     render(row) {
@@ -54,18 +54,18 @@ export const columns = [
           type: row.status ? 'success' : 'error',
         },
         {
-          default: () => (row.status ? '启用' : '禁用'),
+          default: () => (row.status ? '啟用' : '禁用'),
         }
       );
     },
   },
   {
-    title: '创建时间',
+    title: '創建時間',
     key: 'date',
     width: 160,
   },
   {
-    title: '停留时间',
+    title: '停留時間',
     key: 'time',
     width: 80,
   },

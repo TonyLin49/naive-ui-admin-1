@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="基础表单">
-        表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。表单域标签也可支持响应式。
+      <n-card :bordered="false" title="基礎表單">
+        表單頁用於向用户收集或驗證信息，基礎表單常見於數據項較少的表單場景。表單域標簽也可支持嚮應式。
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -16,25 +16,25 @@
             ref="formRef"
             class="py-8"
           >
-            <n-form-item label="预约姓名1" path="name">
-              <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+            <n-form-item label="預約姓名" path="name">
+              <n-input v-model:value="formValue.name" placeholder="輸入姓名" />
             </n-form-item>
-            <n-form-item label="预约号码" path="mobile">
-              <n-input placeholder="电话号码" v-model:value="formValue.mobile" />
+            <n-form-item label="預約號碼" path="mobile">
+              <n-input placeholder="電話號碼" v-model:value="formValue.mobile" />
             </n-form-item>
-            <n-form-item label="预约时间" path="datetime">
+            <n-form-item label="預約時間" path="datetime">
               <n-date-picker type="datetime" v-model:value="formValue.datetime" />
             </n-form-item>
-            <n-form-item label="预约医生" path="doctor">
+            <n-form-item label="預約醫生" path="doctor">
               <n-select
-                placeholder="请选择预约医生"
+                placeholder="請選擇預約醫生"
                 :options="doctorList"
                 v-model:value="formValue.doctor"
               />
             </n-form-item>
-            <n-form-item label="预约事项" path="matter">
+            <n-form-item label="預約事項" path="matter">
               <n-select
-                placeholder="请选择预约事项"
+                placeholder="請選擇預約事項"
                 :options="matterList"
                 v-model:value="formValue.matter"
                 multiple
@@ -48,14 +48,14 @@
                 </n-space>
               </n-radio-group>
             </n-form-item>
-            <n-form-item label="预约备注" path="remark">
+            <n-form-item label="預約備註" path="remark">
               <n-input
                 v-model:value="formValue.remark"
                 type="textarea"
-                placeholder="请输入预约备注"
+                placeholder="請輸入預約備註"
               />
             </n-form-item>
-            <n-form-item label="图片" path="img">
+            <n-form-item label="圖片" path="img">
               <BasicUpload
                 :action="`${uploadUrl}/v1.0/files`"
                 :headers="uploadHeaders"
@@ -65,12 +65,12 @@
                 :height="100"
                 @uploadChange="uploadChange"
                 v-model:value="uploadList"
-                helpText="单个文件不超过20MB，最多只能上传10个文件"
+                helpText="單個文件不超過20MB，最多只能上傳10個文件"
               />
             </n-form-item>
             <div style="margin-left: 80px">
               <n-space>
-                <n-button type="primary" @click="formSubmit">提交预约</n-button>
+                <n-button type="primary" @click="formSubmit">提交預約</n-button>
                 <n-button @click="resetForm">重置</n-button>
               </n-space>
             </div>
@@ -91,11 +91,11 @@
 
   const matterList = [
     {
-      label: '种牙',
+      label: '植牙',
       value: 1,
     },
     {
-      label: '补牙',
+      label: '補牙',
       value: 2,
     },
     {
@@ -106,15 +106,15 @@
 
   const doctorList = [
     {
-      label: '李医生',
+      label: '李醫生',
       value: 1,
     },
     {
-      label: '黄医生',
+      label: '黄醫生',
       value: 2,
     },
     {
-      label: '张医生',
+      label: '張醫生',
       value: 3,
     },
   ];
@@ -122,29 +122,29 @@
   const rules = {
     name: {
       required: true,
-      message: '请输入预约姓名',
+      message: '請輸入預約姓名',
       trigger: 'blur',
     },
     remark: {
       required: true,
-      message: '请输入预约备注',
+      message: '請輸入預約備註',
       trigger: 'blur',
     },
     mobile: {
       required: true,
-      message: '请输入预约电话号码',
+      message: '請輸入預約電話號碼',
       trigger: ['input'],
     },
     datetime: {
       required: true,
       type: 'number',
-      message: '请选择预约时间',
+      message: '請選擇預約時間',
       trigger: ['blur', 'change'],
     },
     doctor: {
       required: true,
       type: 'number',
-      message: '请选择预约医生',
+      message: '請選擇預約醫生',
       trigger: 'change',
     },
   };
@@ -176,9 +176,9 @@
   function formSubmit() {
     formRef.value.validate((errors) => {
       if (!errors) {
-        message.success('验证成功');
+        message.success('驗證成功');
       } else {
-        message.error('验证失败，请填写完整信息');
+        message.error('驗證失敗，請填寫完整信息');
       }
     });
   }

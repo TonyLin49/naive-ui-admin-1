@@ -2,7 +2,7 @@
   <n-card :bordered="false" class="proCard">
     <BasicTable
       title="表格列表"
-      titleTooltip="这是一个提示"
+      titleTooltip="這是一個提示"
       :columns="columns"
       :request="loadDataTable"
       :row-key="(row) => row.id"
@@ -12,7 +12,7 @@
       @update:checked-row-keys="onCheckedRow"
     >
       <template #toolbar>
-        <n-button type="primary" @click="reloadTable">刷新数据</n-button>
+        <n-button type="primary" @click="reloadTable">刷新數據</n-button>
       </template>
     </BasicTable>
   </n-card>
@@ -62,7 +62,7 @@
         auth: ['basic_list'],
       },
       {
-        label: '编辑',
+        label: '編輯',
         onClick: handleEdit.bind(null, record),
         ifShow: () => {
           return true;
@@ -89,7 +89,7 @@
     dialog.info({
       title: '提示',
       content: `您想删除${record.name}`,
-      positiveText: '确定',
+      positiveText: '確定',
       negativeText: '取消',
       onPositiveClick: () => {
         message.success('删除成功');
@@ -100,7 +100,7 @@
 
   function handleEdit(record) {
     console.log(record);
-    message.success('您点击了编辑按钮');
+    message.success('您點擊了編輯按鈕');
   }
 </script>
 

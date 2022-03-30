@@ -1,33 +1,33 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="模态框">
-        模态框，用于向用户收集或展示信息，Modal 采用 Dialog 预设，扩展拖拽效果
+      <n-card :bordered="false" title="模態框">
+        模態框，用於向用户收集或展示信息，Modal 採用 Dialog 預設，擴展拖拽效果
         <br />
         以下是 useModal
-        方式，ref方式，也支持，使用方式和其他组件一致，如：modalRef.value.closeModal()
+        方式，ref方式，也支持，使用方式和其他組件一致，如：modalRef.value.closeModal()
       </n-card>
     </div>
     <n-card :bordered="false" class="proCard mt-4">
       <n-alert title="Modal嵌套Form" type="info">
-        使用 useModal 进行弹窗展示和操作，并演示了在Modal内和Form组件，组合使用方法
+        使用 useModal 進行彈窗展示和操作，並演示了在Modal内和Form組件，組合使用方法
       </n-alert>
       <n-divider />
       <n-space>
-        <n-button type="primary" @click="showModal">打开Modal嵌套Form例子</n-button>
+        <n-button type="primary" @click="showModal">打開Modal嵌套Form例子</n-button>
       </n-space>
       <n-divider />
-      <n-alert title="个性化轻量级" type="info">
-        使用 useModal 进行弹窗展示和操作，自定义配置，实现轻量级效果，更多配置，请参考文档
+      <n-alert title="個性化輕量級" type="info">
+        使用 useModal 進行彈窗展示和操作，自定義配置，實現輕量級效果，更多配置，請参考文檔
       </n-alert>
       <n-divider />
       <n-space>
-        <n-button type="primary" @click="showLightModal">轻量级确认</n-button>
+        <n-button type="primary" @click="showLightModal">輕量級確認</n-button>
       </n-space>
       <n-divider />
       <n-alert title="提示" type="info">
-        组件暴露了，setProps 方法，用于修改组件内部
-        Props，比如标题，等，具体参考UI框架文档，DialogReactive Properties
+        組件暴露了，setProps 方法，用於修改組件内部
+        Props，比如標題等，具體参考UI框架文檔，DialogReactive Properties
       </n-alert>
     </n-card>
 
@@ -48,7 +48,7 @@
       @on-ok="lightOkModal"
     >
       <template #default>
-        <p class="text-gray-500" style="padding-left: 35px">一些对话框内容</p>
+        <p class="text-gray-500" style="padding-left: 35px">一些對話框内容</p>
       </template>
     </basicModal>
   </div>
@@ -65,24 +65,24 @@
       field: 'name',
       component: 'NInput',
       label: '姓名',
-      labelMessage: '这是一个提示',
+      labelMessage: '這是一個提示',
       giProps: {
         span: 1,
       },
       componentProps: {
-        placeholder: '请输入姓名',
+        placeholder: '請輸入姓名',
         onInput: (e: any) => {
           console.log(e);
         },
       },
-      rules: [{ required: true, message: '请输入姓名', trigger: ['blur'] }],
+      rules: [{ required: true, message: '請輸入姓名', trigger: ['blur'] }],
     },
     {
       field: 'mobile',
       component: 'NInputNumber',
-      label: '手机',
+      label: '手機',
       componentProps: {
-        placeholder: '请输入手机号码',
+        placeholder: '請輸入手機號碼',
         showButton: false,
         onInput: (e: any) => {
           console.log(e);
@@ -92,19 +92,19 @@
     {
       field: 'type',
       component: 'NSelect',
-      label: '类型',
+      label: '類型',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择类型',
+        placeholder: '請選擇類型',
         options: [
           {
-            label: '舒适性',
+            label: '舒適性',
             value: 1,
           },
           {
-            label: '经济性',
+            label: '經濟性',
             value: 2,
           },
         ],
@@ -116,7 +116,7 @@
     {
       field: 'makeDate',
       component: 'NDatePicker',
-      label: '预约时间',
+      label: '預約時間',
       giProps: {
         //span: 24,
       },
@@ -132,7 +132,7 @@
     {
       field: 'makeTime',
       component: 'NTimePicker',
-      label: '停留时间',
+      label: '停留時間',
       giProps: {
         //span: 24,
       },
@@ -146,19 +146,19 @@
     {
       field: 'makeProject',
       component: 'NCheckbox',
-      label: '预约项目',
+      label: '預約項目',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择预约项目',
+        placeholder: '請選擇預約項目',
         options: [
           {
-            label: '种牙',
+            label: '植牙',
             value: 1,
           },
           {
-            label: '补牙',
+            label: '補牙',
             value: 2,
           },
           {
@@ -174,18 +174,18 @@
     {
       field: 'makeSource',
       component: 'NRadioGroup',
-      label: '来源',
+      label: '來源',
       giProps: {
         //span: 24,
       },
       componentProps: {
         options: [
           {
-            label: '网上',
+            label: '網上',
             value: 1,
           },
           {
-            label: '门店',
+            label: '門店',
             value: 2,
           },
         ],
@@ -196,7 +196,7 @@
     },
     {
       field: 'status',
-      label: '状态',
+      label: '狀態',
       giProps: {
         //span: 24,
       },
@@ -212,7 +212,7 @@
       const message = useMessage();
 
       const [modalRegister, { openModal, closeModal, setSubLoading }] = useModal({
-        title: '新增预约',
+        title: '新增預約',
       });
 
       const [
@@ -223,7 +223,7 @@
           setSubLoading: lightSetSubLoading,
         },
       ] = useModal({
-        title: '确认对话框',
+        title: '確認對話框',
         showIcon: true,
         type: 'warning',
         closable: false,
@@ -235,14 +235,14 @@
         collapsedRows: 3,
         labelWidth: 120,
         layout: 'horizontal',
-        submitButtonText: '提交预约',
+        submitButtonText: '提交預約',
         showActionButtonGroup: false,
         schemas,
       });
 
       const state = reactive({
         formValue: {
-          name: '小马哥',
+          name: '小馬哥',
         },
       });
 
@@ -252,7 +252,7 @@
           closeModal();
           message.success('提交成功');
         } else {
-          message.error('验证失败，请填写完整信息');
+          message.error('驗證失敗，請填寫完整信息');
           setSubLoading(false);
         }
       }

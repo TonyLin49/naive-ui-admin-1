@@ -54,7 +54,7 @@ export const basicProps = {
   // 确认按钮文字
   submitButtonText: {
     type: String,
-    default: '查询',
+    default: '查詢',
   },
   //重置按钮文字
   resetButtonText: {

@@ -8,35 +8,35 @@ export function checkStatus(status: number, msg: string): void {
     // 未登录则跳转登录页面，并携带当前页面的路径
     // 在登录成功后返回当前页面，这一步需要在登录页操作。
     case 401:
-      $message.error('用户没有权限（令牌、用户名、密码错误）!');
+      $message.error('用户没有權限（令牌、用户名、密碼錯誤）!');
       break;
     case 403:
-      $message.error('用户得到授权，但是访问是被禁止的。!');
+      $message.error('用户得到授權，但是訪問是被禁止的。!');
       break;
     // 404请求不存在
     case 404:
-      $message.error('网络请求错误，未找到该资源!');
+      $message.error('網絡請求錯誤，未找到該資源!');
       break;
     case 405:
-      $message.error('网络请求错误，请求方法未允许!');
+      $message.error('網絡請求錯誤，請求方法未允許!');
       break;
     case 408:
-      $message.error('网络请求超时');
+      $message.error('網絡请求超時');
       break;
     case 500:
-      $message.error('服务器错误,请联系管理员!');
+      $message.error('服務器錯誤,請連系管理员!');
       break;
     case 501:
-      $message.error('网络未实现');
+      $message.error('網絡未實現');
       break;
     case 502:
-      $message.error('网络错误');
+      $message.error('網絡錯誤');
       break;
     case 503:
-      $message.error('服务不可用，服务器暂时过载或维护!');
+      $message.error('服務不可用，服務器暫時過載或維護!');
       break;
     case 504:
-      $message.error('网络超时');
+      $message.error('網絡超時');
       break;
     case 505:
       $message.error('http版本不支持该请求!');

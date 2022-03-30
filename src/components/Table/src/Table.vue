@@ -105,17 +105,17 @@
   const densityOptions = [
     {
       type: 'menu',
-      label: '紧凑',
+      label: '緊湊',
       key: 'small',
     },
     {
       type: 'menu',
-      label: '默认',
+      label: '默認',
       key: 'medium',
     },
     {
       type: 'menu',
-      label: '宽松',
+      label: '寬鬆',
       key: 'large',
     },
   ];

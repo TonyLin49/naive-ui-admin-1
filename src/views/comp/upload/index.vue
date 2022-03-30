@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="上传图片"> 上传图片，用于向用户收集图片信息 </n-card>
+      <n-card :bordered="false" title="上傳圖片"> 上傳圖片，用於向用户收集圖片信息 </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
       <n-grid cols="2 s:1 m:3 l:3 xl:3 2xl:3" responsive="screen">
@@ -14,14 +14,14 @@
             ref="formRef"
             class="py-8"
           >
-            <n-form-item label="预约姓名" path="name">
-              <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+            <n-form-item label="預約姓名" path="name">
+              <n-input v-model:value="formValue.name" placeholder="輸入姓名" />
             </n-form-item>
-            <n-form-item label="预约号码" path="mobile">
-              <n-input placeholder="电话号码" v-model:value="formValue.mobile" />
+            <n-form-item label="預約號碼" path="mobile">
+              <n-input placeholder="電話號碼" v-model:value="formValue.mobile" />
             </n-form-item>
 
-            <n-form-item label="病例图片" path="images">
+            <n-form-item label="病例圖片" path="images">
               <BasicUpload
                 :action="`${uploadUrl}/v1.0/files`"
                 :headers="uploadHeaders"
@@ -31,12 +31,12 @@
                 :height="100"
                 @uploadChange="uploadChange"
                 v-model:value="formValue.images"
-                helpText="单个文件不超过2MB，最多只能上传10个文件"
+                helpText="單個文件不超過2MB，最多只能上傳10個文件"
               />
             </n-form-item>
             <div style="margin-left: 80px">
               <n-space>
-                <n-button type="primary" @click="formSubmit">提交预约</n-button>
+                <n-button type="primary" @click="formSubmit">提交預約</n-button>
                 <n-button @click="resetForm">重置</n-button>
               </n-space>
             </div>
@@ -58,18 +58,18 @@
   const rules = {
     name: {
       required: true,
-      message: '请输入预约姓名',
+      message: '請輸入預約姓名',
       trigger: 'blur',
     },
     remark: {
       required: true,
-      message: '请输入预约备注',
+      message: '請輸入預約備註',
       trigger: 'blur',
     },
     images: {
       required: true,
       type: 'array',
-      message: '请上传病例图片',
+      message: '請上傳病例圖片',
       trigger: 'change',
     },
   };
@@ -94,9 +94,9 @@
   function formSubmit() {
     formRef.value.validate((errors) => {
       if (!errors) {
-        message.success('验证成功');
+        message.success('驗證成功');
       } else {
-        message.error('验证失败，请填写完整信息');
+        message.error('驗證失敗，請填寫完整信息');
       }
     });
   }

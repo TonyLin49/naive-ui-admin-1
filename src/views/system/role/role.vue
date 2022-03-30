@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="角色权限管理">
-        页面数据为 Mock 示例数据，非真实数据。
+      <n-card :bordered="false" title="角色權限管理">
+        頁面數據為 Mock 示例數據，非真實數據。
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -21,7 +21,7 @@
                 <PlusOutlined />
               </n-icon>
             </template>
-            添加角色
+            新增角色
           </n-button>
         </template>
 
@@ -49,11 +49,11 @@
       <template #action>
         <n-space>
           <n-button type="info" ghost icon-placement="left" @click="packHandle">
-            全部{{ expandedKeys.length ? '收起' : '展开' }}
+            全部{{ expandedKeys.length ? '收起' : '展開' }}
           </n-button>
 
           <n-button type="info" ghost icon-placement="left" @click="checkedAllHandle">
-            全部{{ checkedAll ? '取消' : '选择' }}
+            全部{{ checkedAll ? '取消' : '選擇' }}
           </n-button>
           <n-button type="primary" :loading="formBtnLoading" @click="confirmForm">提交</n-button>
         </n-space>
@@ -101,7 +101,7 @@
         style: 'button',
         actions: [
           {
-            label: '菜单权限',
+            label: '菜單權限',
             onClick: handleMenuAuth.bind(null, record),
             // 根据业务控制是否显示 isShow 和 auth 是并且关系
             ifShow: () => {
@@ -111,7 +111,7 @@
             auth: ['basic_list'],
           },
           {
-            label: '编辑',
+            label: '編輯',
             onClick: handleEdit.bind(null, record),
             ifShow: () => {
               return true;
@@ -161,24 +161,24 @@
           reloadTable();
         });
       } else {
-        message.error('请填写完整信息');
+        message.error('請填寫完整信息');
       }
       formBtnLoading.value = false;
     });
   }
 
   function handleEdit(record: Recordable) {
-    console.log('点击了编辑', record);
+    console.log('點擊了編輯', record);
     router.push({ name: 'basic-info', params: { id: record.id } });
   }
 
   function handleDelete(record: Recordable) {
-    console.log('点击了删除', record);
-    message.info('点击了删除');
+    console.log('點擊了删除', record);
+    message.info('點擊了删除');
   }
 
   function handleMenuAuth(record: Recordable) {
-    editRoleTitle.value = `分配 ${record.name} 的菜单权限`;
+    editRoleTitle.value = `分配 ${record.name} 的菜單權限`;
     checkedKeys.value = record.menu_keys;
     showModal.value = true;
   }

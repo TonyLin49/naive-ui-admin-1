@@ -19,7 +19,7 @@ const adminInfo = {
       value: 'dashboard_console',
     },
     {
-      label: '监控页',
+      label: '監控頁',
       value: 'dashboard_monitor',
     },
     {
@@ -27,11 +27,11 @@ const adminInfo = {
       value: 'dashboard_workplace',
     },
     {
-      label: '基础列表',
+      label: '基礎列表',
       value: 'basic_list',
     },
     {
-      label: '基础列表删除',
+      label: '基礎列表删除',
       value: 'basic_list_delete',
     },
   ],

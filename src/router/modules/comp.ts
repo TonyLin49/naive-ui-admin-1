@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     redirect: '/comp/table',
     meta: {
-      title: '组件示例',
+      title: '組件示例',
       icon: renderIcon(WalletOutlined),
       sort: 8,
     },
@@ -41,7 +41,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'basic',
             name: `${routeName}_table_basic`,
             meta: {
-              title: '基础表格',
+              title: '基礎表格',
             },
             component: () => import('@/views/comp/table/basic.vue'),
           },
@@ -49,7 +49,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'editCell',
             name: `${routeName}_table_editCell`,
             meta: {
-              title: '单元格编辑',
+              title: '單元格編輯',
             },
             component: () => import('@/views/comp/table/editCell.vue'),
           },
@@ -57,7 +57,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'editRow',
             name: `${routeName}_table_editRow`,
             meta: {
-              title: '整行编辑',
+              title: '整行編輯',
             },
             component: () => import('@/views/comp/table/editRow.vue'),
           },
@@ -69,14 +69,14 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/comp/form/basic',
         component: ParentLayout,
         meta: {
-          title: '表单',
+          title: '表單',
         },
         children: [
           {
             path: 'basic',
             name: `${routeName}_form_basic`,
             meta: {
-              title: '基础使用',
+              title: '基礎使用',
             },
             component: () => import('@/views/comp/form/basic.vue'),
           },
@@ -94,7 +94,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'upload',
         name: `${routeName}_upload`,
         meta: {
-          title: '上传图片',
+          title: '上傳圖片',
         },
         component: () => import('@/views/comp/upload/index.vue'),
       },
@@ -102,7 +102,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'modal',
         name: `${routeName}_modal`,
         meta: {
-          title: '弹窗扩展',
+          title: '彈窗擴展',
         },
         component: () => import('@/views/comp/modal/index.vue'),
       },

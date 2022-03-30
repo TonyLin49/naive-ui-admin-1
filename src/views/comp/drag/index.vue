@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="拖拽"> 常用于卡片，事项，预约，流程，计划等， </n-card>
+      <n-card :bordered="false" title="拖拽"> 常用於卡片，事項，預約，流程，計劃等， </n-card>
     </div>
 
     <n-alert title="花式拖拽演示" type="info" class="mt-4">
-      每个卡片，都可以上下拖拽顺序，另外不同卡片，也可以拖拽过去，拖拽过来，都不在话下呢，快试试O(∩_∩)O哈哈~
+      每個卡片，都可以上下拖拽順序，另外不同卡片，也可以拖拽過去，拖拽過来，都不在話下呢，快試試O(∩_∩)O哈哈~
     </n-alert>
 
     <n-grid
@@ -44,7 +44,7 @@
 
       <n-grid-item>
         <NCard
-          title="开发中"
+          title="開發中"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -62,7 +62,7 @@
           >
             <template #item="{ element }">
               <div class="cursor-move draggable-li">
-                <n-tag type="warning">开发中</n-tag><span class="ml-2">{{ element.name }}</span>
+                <n-tag type="warning">開發中</n-tag><span class="ml-2">{{ element.name }}</span>
               </div>
             </template>
           </Draggable>
@@ -97,7 +97,7 @@
 
       <n-grid-item>
         <NCard
-          title="已验收"
+          title="已驗收"
           :segmented="{ content: 'hard', footer: 'hard' }"
           size="small"
           :bordered="false"
@@ -114,7 +114,7 @@
           >
             <template #item="{ element }">
               <div class="cursor-move draggable-li">
-                <n-tag type="success">已验收</n-tag><span class="ml-2">{{ element.name }}</span>
+                <n-tag type="success">已驗收</n-tag><span class="ml-2">{{ element.name }}</span>
               </div>
             </template>
           </Draggable>
@@ -129,21 +129,21 @@
   import Draggable from 'vuedraggable';
 
   const demandList = reactive([
-    { name: '预约表单页面，能填写预约相关信息', id: 1 },
-    { name: '促销活动页面，包含促销广告展示', id: 2 },
-    { name: '商品列表，需要一个到货提醒功能', id: 3 },
-    { name: '商品需要一个评价功能', id: 4 },
-    { name: '商品图片需要提供放大镜', id: 5 },
-    { name: '订单需要提供删除到回收站', id: 6 },
-    { name: '用户头像上传，需要支持裁剪', id: 7 },
-    { name: '据说Vue3.2发布了，setup啥时候支持？', id: 8 },
+    { name: '預約表單頁面，能填寫預約相關信息', id: 1 },
+    { name: '促銷活動頁面，包含促銷廣告展示', id: 2 },
+    { name: '商品列表，需要一個到貨提醒功能', id: 3 },
+    { name: '商品需要一個評價功能', id: 4 },
+    { name: '商品圖片需要提供放大鏡', id: 5 },
+    { name: '訂單需要提供删除到回收站', id: 6 },
+    { name: '用户頭像上傳，需要支持裁剪', id: 7 },
+    { name: '據說Vue3.2發布了，setup啥時候支持？', id: 8 },
   ]);
 
-  const exploitList = reactive([{ name: '商品图片需要提供放大镜', id: 5 }]);
+  const exploitList = reactive([{ name: '商品圖片需要提供放大鏡', id: 5 }]);
 
-  const completeList = reactive([{ name: '商品图片需要提供放大镜', id: 5 }]);
+  const completeList = reactive([{ name: '商品圖片需要提供放大鏡', id: 5 }]);
 
-  const approvedList = reactive([{ name: '商品图片需要提供放大镜', id: 5 }]);
+  const approvedList = reactive([{ name: '商品圖片需要提供放大鏡', id: 5 }]);
 </script>
 
 <style lang="less" scoped>

@@ -8,12 +8,12 @@ export const columns = [
     width: 100,
   },
   {
-    title: '编码',
+    title: '編碼',
     key: 'no',
     width: 100,
   },
   {
-    title: '名称',
+    title: '名稱',
     key: 'name',
     editComponent: 'NInput',
     // 默认必填校验
@@ -22,7 +22,7 @@ export const columns = [
     width: 200,
   },
   {
-    title: '头像',
+    title: '頭像',
     key: 'avatar',
     width: 100,
     render(row) {
@@ -39,7 +39,7 @@ export const columns = [
     editComponentProps: {
       options: [
         {
-          label: '广东省',
+          label: '廣東省',
           value: 1,
         },
         {
@@ -53,7 +53,7 @@ export const columns = [
     ellipsis: false,
   },
   {
-    title: '开始日期',
+    title: '開始日期',
     key: 'beginTime',
     edit: true,
     width: 160,
@@ -66,17 +66,17 @@ export const columns = [
     ellipsis: false,
   },
   {
-    title: '结束日期',
+    title: '結束日期',
     key: 'endTime',
     width: 160,
   },
   {
-    title: '创建时间',
+    title: '創建時間',
     key: 'date',
     width: 160,
   },
   {
-    title: '停留时间',
+    title: '停留時間',
     key: 'time',
     width: 80,
   },

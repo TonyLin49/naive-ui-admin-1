@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/frame/docs',
     component: Layout,
     meta: {
-      title: '外部页面',
+      title: '外部頁面',
       sort: 8,
       icon: renderIcon(DesktopOutline),
     },
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'docs',
         name: 'frame-docs',
         meta: {
-          title: '项目文档(内嵌)',
+          title: '項目文檔(内嵌)',
           frameSrc: 'https://naive-ui-admin-docs.vercel.app',
         },
         component: IFrame,

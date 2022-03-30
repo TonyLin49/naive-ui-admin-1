@@ -9,7 +9,7 @@
     <template v-if="!showLogin">
       <div class="lock-box">
         <div class="lock">
-          <span class="lock-icon" title="解锁屏幕" @click="onLockLogin(true)">
+          <span class="lock-icon" title="解鎖屏幕" @click="onLockLogin(true)">
             <n-icon>
               <lock-outlined />
             </n-icon>
@@ -26,7 +26,7 @@
 
       <div class="local-time">
         <div class="time">{{ hour }}:{{ minute }}</div>
-        <div class="date">{{ month }}月{{ day }}号，星期{{ week }}</div>
+        <div class="date">{{ month }}月{{ day }}號，星期{{ week }}</div>
       </div>
       <div class="computer-status">
         <span :class="{ offline: !online }" class="network">
@@ -50,7 +50,7 @@
           autofocus
           v-model:value="loginParams.password"
           @keyup.enter="onLogin"
-          placeholder="请输入登录密码"
+          placeholder="請輸入登入密碼"
         >
           <template #suffix>
             <n-icon @click="onLogin" style="cursor: pointer">
@@ -66,8 +66,8 @@
 
         <div class="w-full mt-1 flex justify-around">
           <div><a @click="showLogin = false">返回</a></div>
-          <div><a @click="goLogin">重新登录</a></div>
-          <div><a @click="onLogin">进入系统</a></div>
+          <div><a @click="goLogin">重新登入</a></div>
+          <div><a @click="onLogin">進入系統</a></div>
         </div>
       </div>
     </template>
@@ -123,7 +123,7 @@
         showLogin: false,
         loginLoading: false, // 正在登录
         isLoginError: false, //密码错误
-        errorMsg: '密码错误',
+        errorMsg: '密碼錯誤',
         loginParams: {
           username: username || '',
           password: '',

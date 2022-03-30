@@ -115,7 +115,7 @@
               <SettingOutlined />
             </n-icon>
           </template>
-          <span>项目配置</span>
+          <span>項目配置</span>
         </n-tooltip>
       </div>
     </div>
@@ -229,12 +229,12 @@
       const doLogout = () => {
         dialog.info({
           title: '提示',
-          content: '您确定要退出登录吗',
-          positiveText: '确定',
+          content: '您確定要退出登入嗎',
+          positiveText: '確定',
           negativeText: '取消',
           onPositiveClick: () => {
             userStore.logout().then(() => {
-              message.success('成功退出登录');
+              message.success('成功退出登入');
               // 移除标签页
               localStorage.removeItem(TABS_ROUTES);
               router
@@ -285,7 +285,7 @@
         },
         {
           icon: 'LockOutlined',
-          tips: '锁屏',
+          tips: '鎖屏',
           eventObject: {
             click: () => useLockscreen.setLock(true),
           },
@@ -293,11 +293,11 @@
       ];
       const avatarOptions = [
         {
-          label: '个人设置',
+          label: '個人設置',
           key: 1,
         },
         {
-          label: '退出登录',
+          label: '退出登入',
           key: 2,
         },
       ];

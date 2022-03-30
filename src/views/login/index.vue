@@ -6,7 +6,7 @@
         <div class="view-account-top-logo">
           <img src="~@/assets/images/account-logo.png" alt="" />
         </div>
-        <div class="view-account-top-desc">Naive Ui Admin中台前端/设计解决方案</div>
+        <div class="view-account-top-desc">Naive Ui Admin中台前端/設計解決方案</div>
       </div>
       <div class="view-account-form">
         <n-form
@@ -17,7 +17,7 @@
           :rules="rules"
         >
           <n-form-item path="username">
-            <n-input v-model:value="formInline.username" placeholder="请输入用户名">
+            <n-input v-model:value="formInline.username" placeholder="請輸入用户名">
               <template #prefix>
                 <n-icon size="18" color="#808695">
                   <PersonOutline />
@@ -30,7 +30,7 @@
               v-model:value="formInline.password"
               type="password"
               showPasswordOn="click"
-              placeholder="请输入密码"
+              placeholder="請輸入密碼"
             >
               <template #prefix>
                 <n-icon size="18" color="#808695">
@@ -42,19 +42,19 @@
           <n-form-item class="default-color">
             <div class="flex justify-between">
               <div class="flex-initial">
-                <n-checkbox v-model:checked="autoLogin">自动登录</n-checkbox>
+                <n-checkbox v-model:checked="autoLogin">自動登入</n-checkbox>
               </div>
               <div class="flex-initial order-last">
-                <a href="javascript:">忘记密码</a>
+                <a href="javascript:">忘記密碼</a>
               </div>
             </div>
           </n-form-item>
           <n-form-item>
             <n-button type="primary" @click="handleSubmit" size="large" :loading="loading" block>
-              登录
+              登入
             </n-button>
           </n-form-item>
-          <n-form-item class="default-color">
+          <!-- <n-form-item class="default-color">
             <div class="flex view-account-other">
               <div class="flex-initial">
                 <span>其它登录方式</span>
@@ -77,7 +77,7 @@
                 <a href="javascript:">注册账号</a>
               </div>
             </div>
-          </n-form-item>
+          </n-form-item> -->
         </n-form>
       </div>
     </div>

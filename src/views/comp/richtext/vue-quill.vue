@@ -2,7 +2,7 @@
   <div>
     <div class="n-layout-page-header">
       <n-card :bordered="false" title="富文本">
-        富文本，用于展示图文信息，比如商品详情，文章详情等...
+        富文本，用於展示圖文信息，比如商品詳情，文章詳情等...
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -17,8 +17,8 @@
       <template #footer>
         <n-space>
           <n-button @click="addText">增加文本</n-button>
-          <n-button @click="addImg">增加图片</n-button>
-          <n-button @click="getHtml">获取HTML</n-button>
+          <n-button @click="addImg">增加圖片</n-button>
+          <n-button @click="getHtml">獲取HTML</n-button>
         </n-space>
       </template>
     </n-card>
@@ -42,10 +42,10 @@
   import '@vueup/vue-quill/dist/vue-quill.snow.css';
   const quillEditor = ref();
   const myContent = ref(
-    '<h4>Naive Ui Admin 是一个基于 vue3,vite2,TypeScript 的中后台解决方案</h4>'
+    '<h4>Naive Ui Admin 是一個基於 vue3,vite2,TypeScript 的中后台解决方案</h4>'
   );
   const myContentHtml = ref(
-    '<h4>Naive Ui Admin 是一个基于 vue3,vite2,TypeScript 的中后台解决方案</h4>'
+    '<h4>Naive Ui Admin 是一個基於 vue3,vite2,TypeScript 的中后台解决方案</h4>'
   );
 
   const options = reactive({
@@ -71,11 +71,11 @@
       ],
     },
     theme: 'snow',
-    placeholder: '输入您喜欢的内容吧！',
+    placeholder: '輸入您喜歡的内容吧！',
   });
 
   function readyQuill() {
-    console.log('Quill准备好了');
+    console.log('Quill准備好了');
   }
 
   function getHtml() {

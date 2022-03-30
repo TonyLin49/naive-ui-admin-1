@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'index',
         name: `about_index`,
         meta: {
-          title: '关于',
+          title: '關於',
           extra: renderNew(),
           activeMenu: 'about_index',
         },

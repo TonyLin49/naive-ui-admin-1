@@ -210,24 +210,24 @@
         const isDisabled = unref(tabsList).length <= 1;
         return [
           {
-            label: '刷新当前',
+            label: '刷新當前',
             key: '1',
             icon: renderIcon(ReloadOutlined),
           },
           {
-            label: `关闭当前`,
+            label: `關閉當前`,
             key: '2',
             disabled: unref(isCurrent) || isDisabled,
             icon: renderIcon(CloseOutlined),
           },
           {
-            label: '关闭其他',
+            label: '關閉其他',
             key: '3',
             disabled: isDisabled,
             icon: renderIcon(ColumnWidthOutlined),
           },
           {
-            label: '关闭全部',
+            label: '關閉全部',
             key: '4',
             disabled: isDisabled,
             icon: renderIcon(MinusOutlined),
@@ -313,7 +313,7 @@
       // 关闭当前页面
       const removeTab = (route) => {
         if (tabsList.value.length === 1) {
-          return message.warning('这已经是最后一页，不能再关闭了！');
+          return message.warning('這已經是最後一頁，不能再關閉了！');
         }
         delKeepAliveCompName();
         tabsViewStore.closeCurrentTab(route);

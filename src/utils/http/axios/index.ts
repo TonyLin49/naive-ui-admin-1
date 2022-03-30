@@ -58,7 +58,7 @@ const transform: AxiosTransform = {
 
     if (!data) {
       // return '[HTTP] Request has no return value';
-      throw new Error('请求出错，请稍候重试');
+      throw new Error('請求出錯，請稍候重試');
     }
     //  这里 code，result，message为 后台统一的字段，需要修改为项目自己的接口返回格式
     const { code, result, message } = data;
@@ -74,13 +74,13 @@ const transform: AxiosTransform = {
         });
       } else if (!hasSuccess && (errorMessageText || isShowErrorMessage)) {
         // 是否显示自定义信息提示
-        $message.error(message || errorMessageText || '操作失败！');
+        $message.error(message || errorMessageText || '操作失敗！');
       } else if (!hasSuccess && options.errorMessageMode === 'modal') {
         // errorMessageMode=‘custom-modal’的时候会显示modal错误弹窗，而不是消息提示，用于一些比较重要的错误
         $dialog.info({
           title: '提示',
           content: message,
-          positiveText: '确定',
+          positiveText: '確定',
           onPositiveClick: () => {},
         });
       }
@@ -103,11 +103,11 @@ const transform: AxiosTransform = {
         const LoginPath = PageEnum.BASE_LOGIN;
         if (router.currentRoute.value?.name === LoginName) return;
         // 到登录页
-        errorMsg = '登录超时，请重新登录!';
+        errorMsg = '登入超時，請重新登入!';
         $dialog.warning({
           title: '提示',
-          content: '登录身份已失效，请重新登录!',
-          positiveText: '确定',
+          content: '登入身份已失效，請重新登入!',
+          positiveText: '確定',
           //negativeText: '取消',
           closable: false,
           maskClosable: false,
@@ -200,14 +200,14 @@ const transform: AxiosTransform = {
     const err: string = error.toString();
     try {
       if (code === 'ECONNABORTED' && message.indexOf('timeout') !== -1) {
-        $message.error('接口请求超时，请刷新页面重试!');
+        $message.error('接口請求超時，請刷新頁面重試!');
         return;
       }
       if (err && err.includes('Network Error')) {
         $dialog.info({
-          title: '网络异常',
-          content: '请检查您的网络连接是否正常',
-          positiveText: '确定',
+          title: '網絡異常',
+          content: '請檢查您的網絡連接是否正常',
+          positiveText: '確定',
           //negativeText: '取消',
           closable: false,
           maskClosable: false,
@@ -224,7 +224,7 @@ const transform: AxiosTransform = {
     if (!isCancel) {
       checkStatus(error.response && error.response.status, msg);
     } else {
-      console.warn(error, '请求被取消！');
+      console.warn(error, '請求被取消！');
     }
     //return Promise.reject(error);
     return Promise.reject(response?.data);

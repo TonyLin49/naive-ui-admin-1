@@ -40,7 +40,7 @@
               <n-icon size="18" class="m-auto">
                 <PlusOutlined />
               </n-icon>
-              <span class="upload-title">上传图片</span>
+              <span class="upload-title">上傳圖片</span>
             </div>
           </n-upload>
         </div>
@@ -59,7 +59,7 @@
   <n-modal
     v-model:show="showModal"
     preset="card"
-    title="预览"
+    title="預覽"
     :bordered="false"
     :style="{ width: '520px' }"
   >
@@ -125,8 +125,8 @@
       function remove(index: number) {
         dialog.info({
           title: '提示',
-          content: '你确定要删除吗？',
-          positiveText: '确定',
+          content: '你確定要删除嗎？',
+          positiveText: '確定',
           negativeText: '取消',
           onPositiveClick: () => {
             state.imgList.splice(index, 1);
@@ -156,14 +156,14 @@
 
         // 设置最大值，则判断
         if (maxSize && fileInfo.size / 1024 / 1024 >= maxSize) {
-          message.error(`上传文件最大值不能超过${maxSize}M`);
+          message.error(`上傳文件最大值不能超過${maxSize}M`);
           return false;
         }
 
         // 设置类型,则判断
         const fileType = componentSetting.upload.fileType;
         if (acceptRef.length > 0 && !checkFileType(fileInfo.type)) {
-          message.error(`只能上传文件类型为${fileType.join(',')}`);
+          message.error(`只能上傳文件類型為${fileType.join(',')}`);
           return false;
         }
 
@@ -175,7 +175,7 @@
         const res = eval('(' + Event.target.response + ')');
         const infoField = componentSetting.upload.apiSetting.infoField;
         const { code } = res;
-        const message = res.msg || res.message || '上传失败';
+        const message = res.msg || res.message || '上傳失敗';
         const result = res[infoField];
         //成功
         if (code === ResultEnum.SUCCESS) {

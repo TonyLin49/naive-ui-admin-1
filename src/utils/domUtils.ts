@@ -1,3 +1,4 @@
+import { Fn } from '@vueuse/core';
 import { upperFirst } from 'lodash-es';
 
 export interface ViewportOffsetResult {
